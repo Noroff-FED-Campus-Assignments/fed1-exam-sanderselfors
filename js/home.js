@@ -1,5 +1,6 @@
-const endpoint = 'https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/?per_page=100';
+const endpoint = 'https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/?per_page=12';
 const postList = document.getElementById('post-list');
+const carouselContainer = document.getElementById('carousel-container');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const itemsPerPage = 4;
@@ -25,33 +26,47 @@ function renderPost(post) {
   link.appendChild(title);
 }
 
-function renderPosts() {
+function renderPosts(startIndex) {
   postList.innerHTML = '';
-  posts.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
-    .forEach(post => renderPost(post));
+  for (let i = startIndex; i < startIndex + itemsPerPage; i++) {
+    if (i >= posts.length) {
+      break;
+    }
+    renderPost(posts[i]);
+  }
 }
 
 function fetchPosts() {
   fetch(`${endpoint}&_embed`)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch posts');
+      }
+      return response.json();
+    })
     .then(data => {
       posts = data;
-      renderPosts();
+      renderPosts(0);
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      console.error(error);
+      const errorMessage = document.createElement('p');
+      errorMessage.innerText = 'Failed to fetch posts. Please try again later.';
+      carouselContainer.appendChild(errorMessage);
+    });
 }
 
 function handlePrev() {
   if (currentPage > 0) {
     currentPage--;
-    renderPosts();
+    renderPosts(currentPage * itemsPerPage);
   }
 }
 
 function handleNext() {
   if (currentPage < Math.ceil(posts.length / itemsPerPage) - 1) {
     currentPage++;
-    renderPosts();
+    renderPosts(currentPage * itemsPerPage);
   }
 }
 

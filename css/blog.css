@@ -172,49 +172,6 @@ html, body{
       padding-bottom: 300px;
   }
   
-    .getstartedbutton{
-      background-color: none;
-      border-radius: 10px;
-      border: 2px solid #FF9243;
-      color: #7A7A7A;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: center;
-      margin: 0 auto;
-      margin-bottom: 250px;
-      width: 300px;
-      
-  
-  
-    }
-    .getstartedbutton {
-      transition: 300ms;
-    }
-    .getstartedbutton:hover{
-      background-color: #7A7A7A;
-      color: #FF9243;
-      border: 2px solid #7A7A7A;
-      transition: 300ms;
-    }
-  
-    .introtext {
-      color: #7A7A7A;
-      padding: 20px;
-      background-color: #FFFFFF;
-      align-items: center;
-      width: 80%;
-      border-radius: 20px;
-      line-height: 2rem;
-      margin: 0 auto;
-      max-width: 1000px;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
     
     * {
       box-sizing: border-box;
@@ -239,12 +196,11 @@ html, body{
 
     .post-list {
         display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 20px;
         list-style: none;
         padding: 20px;
-        margin: 0 auto;
-        width: 80%;
-        max-width: 1000px;
+        margin: 0;
       }
   
       .post-card {
@@ -270,18 +226,47 @@ html, body{
       .post-excerpt {
         margin-bottom: 20px;
       }
+      p{
+        padding: 5px;
+        line-height: 2rem;
+        font-size: 1rem;
+        color: #7A7A7A;
+      }
   
       .read-more-btn {
         background-color: #FF9243;
         color: #fff;
         padding: 10px 20px;
         border-radius: 5px;
+        float: right;
         text-decoration: none;
         transition: background-color 0.3s ease;
       }
   
       .read-more-btn:hover {
         background-color: #e07d35;
+      }
+      .show-more-btn{
+        background-color: none;
+        border-radius: 10px;
+        border: 2px solid #FF9243;
+        color: #7A7A7A;
+        font-size: 1rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        width: 250px;
+        transition: 300ms;
+        cursor: pointer;
+      }
+      .show-more-btn:hover{
+        background-color: #7A7A7A;
+        color: #FF9243;
+        border: 2px solid #7A7A7A;
+        transition: 300ms;
       }
     footer{
       width: 100%;
