@@ -1,15 +1,98 @@
-/*!
- * Forms
- * form classes use the c- prefix to indicate they are components used in layout.
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-2/forms
- */
+.contactsection{
+  background-color: #FFFFFF;  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  min-width: 320px;
+  margin-top: 110px;
+  padding-bottom: 170px;
+  margin-bottom: 110px;  
+}
+.contactform{
+  align-items: center;
+}
 
-.c-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: var(--spacing-1);
-  padding: var(--spacing-1);
-  background-color: var(--color-white);
-  border-radius: var(--radius-1);
-  box-shadow: var(--shadow-1);
+.contacttext{
+  color: #E6D6B5;
+  font-size: 20px;
+}
+
+.contactform input {
+min-height: 34px;
+min-width: 200px;
+width: 300px;
+max-width: 800px;
+border-radius: 5px;
+border: 1.5px solid #7A7A7A;
+
+}
+
+.contactform input:is(:hover, :active) {
+border-color: rgb(60, 0, 255);
+}
+
+input.error-occurred {
+border-color: rgb(255, 0, 0);
+background-color: white;
+}
+
+input.successfull {
+border-color: #00ff04;
+background-color: white;
+}
+
+.submitbutton {
+  font-size: medium;
+  background-color: #FF9243;
+  color: #7A7A7A;
+  padding: 7px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 82px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.resetbutton {
+  font-size: medium;
+  background-color: #FF9243;
+  color: #7A7A7A;
+  padding: 7px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 82px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.submitbutton:hover{
+  color: white;
+  transition-duration: 150ms;
+
+}
+
+.resetbutton:hover{
+  color: rgb(255, 0, 0);
+  transition-duration: 150ms;
+  
+}
+
+.contactform label{
+  display: none;
 }

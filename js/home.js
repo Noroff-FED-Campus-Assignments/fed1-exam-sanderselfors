@@ -1,0 +1,61 @@
+const endpoint = 'https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/?per_page=100';
+const postList = document.getElementById('post-list');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const itemsPerPage = 4;
+let currentPage = 0;
+let posts = [];
+
+function renderPost(post) {
+  const li = document.createElement('li');
+  const link = document.createElement('a');
+  link.href = `blogdetails.html?id=${post.id}`;
+
+  if (post._embedded['wp:featuredmedia']) {
+    const img = new Image();
+    img.src = post._embedded['wp:featuredmedia'][0].source_url;
+    img.alt = post.title.rendered;
+    link.appendChild(img);
+  }
+
+  li.appendChild(link);
+  postList.appendChild(li);
+  const title = document.createElement('h2');
+  title.innerText = post.title.rendered;
+  link.appendChild(title);
+}
+
+function renderPosts() {
+  postList.innerHTML = '';
+  posts.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
+    .forEach(post => renderPost(post));
+}
+
+function fetchPosts() {
+  fetch(`${endpoint}&_embed`)
+    .then(response => response.json())
+    .then(data => {
+      posts = data;
+      renderPosts();
+    })
+    .catch(error => console.error(error));
+}
+
+function handlePrev() {
+  if (currentPage > 0) {
+    currentPage--;
+    renderPosts();
+  }
+}
+
+function handleNext() {
+  if (currentPage < Math.ceil(posts.length / itemsPerPage) - 1) {
+    currentPage++;
+    renderPosts();
+  }
+}
+
+prevBtn.addEventListener('click', handlePrev);
+nextBtn.addEventListener('click', handleNext);
+
+fetchPosts();
