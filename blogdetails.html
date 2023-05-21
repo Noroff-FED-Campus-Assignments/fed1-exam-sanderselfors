@@ -8,6 +8,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Headless CMS" />
     <meta name="author" content="Sander Selfors" />
     <link rel="stylesheet" href="/css/post.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,9 +18,17 @@
     <!-- TODO: Import Javascript -->
     <title>Blog Details</title>
   </head>
-  <body class="animate__animated animate__fadeIn">
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
     <header>
       <nav class="navbar">
+        <div class="navheader">
+          <a href="index.html" class="nav-header1"
+            >Expand<span style="color: #eaeaea">Media</span></a
+          >
+        </div>
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="index.html" class="homebutton">Home</a>
@@ -57,11 +66,15 @@
     </main>
 
     <footer>
+      <div class="footer-logo">
+        <a href="index.html">Expand<span style="color: #eaeaea">Media</span></a>
+      </div>
       <div class="copyright">
-        <p>© 2023 Made by Sander Selfors</p>
+        <h4>© 2023 Made by Sander Selfors</h4>
       </div>
     </footer>
     <script type="module" src="/js/details.js"></script>
     <script type="module" src="/js/hamburger.js"></script>
+    <script type="module" src="/js/loader.js"></script>
   </body>
 </html>

@@ -8,6 +8,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Headless CMS" />
     <meta name="author" content="Sander Selfors" />
     <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,9 +18,24 @@
     <!-- TODO: Import Javascript -->
     <title>Blog Posts</title>
   </head>
-  <body class="animate__animated animate__fadeIn">
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
     <header>
+      <video autoplay loop muted playsinline>
+        <source
+          src="/Images/pexels-pavel-danilyuk-8004282-1920x1080-25fps.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
       <nav class="navbar">
+        <div class="navheader">
+          <a href="index.html" class="nav-header1"
+            >Expand<span style="color: #eaeaea">Media</span></a
+          >
+        </div>
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="index.html" class="homebutton">Home</a>
@@ -47,21 +63,21 @@
     </header>
 
     <main>
-      <form id="search-form">
-        <input type="text" id="search-input" placeholder="Search blog posts" />
-        <button type="submit">Search</button>
-      </form>
       <h3>All Blog Posts</h3>
       <ul class="post-list" id="post-list"></ul>
       <button class="show-more-btn" id="show-more-btn">Show More Posts</button>
     </main>
 
     <footer>
+      <div class="footer-logo">
+        <a href="index.html">Expand<span style="color: #eaeaea">Media</span></a>
+      </div>
       <div class="copyright">
-        <p>© 2023 Made by Sander Selfors</p>
+        <h4>© 2023 Made by Sander Selfors</h4>
       </div>
     </footer>
     <script type="module" src="/js/blogposts.js"></script>
     <script type="module" src="/js/hamburger.js"></script>
+    <script type="module" src="/js/loader.js"></script>
   </body>
 </html>

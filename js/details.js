@@ -11,6 +11,9 @@ fetch(`https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/${post
     return response.json();
   })
   .then(data => {
+
+    document.title = data.title.rendered;
+    
     postTitleEl.innerText = data.title.rendered;
     postContentEl.innerHTML = data.content.rendered;
 
