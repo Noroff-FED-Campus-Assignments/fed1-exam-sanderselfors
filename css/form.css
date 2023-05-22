@@ -10,7 +10,6 @@
   margin: 0 auto;
   max-width: 600px;
   min-width: 320px;
-  margin-top: 130px;
   padding-bottom: 60px;
   margin-bottom: 110px;
 }
@@ -30,12 +29,27 @@ min-height: 34px;
 width: 300px;
 padding: 10px;
 border-radius: 5px;
+transition: 300ms;
 border: 1.5px solid #7A7A7A;
 
 }
 
+textarea#message{
+  min-height: 150px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1.5px solid #7A7A7A;
+  font-family: 'SF Pro', sans-serif;
+  transition: 300ms;
+}
+textarea#message:hover{
+  border-color: #FF9243;
+  transition: 300ms;
+}
 .contactform input:is(:hover, :active) {
 border-color: #FF9243;
+transition: 300ms;
 }
 
 input.error-occurred {
@@ -48,17 +62,28 @@ border-color: #00ff04;
 background-color: white;
 }
 
+textarea#message.error-occurred {
+  border-color: rgb(255, 0, 0);
+  background-color: white;
+  }
+  
+  textarea#message.successfull {
+  border-color: #00ff04;
+  background-color: white;
+  }
+
 .submitbutton {
   font-size: medium;
   border: 2px solid #FF9243;
   background-color: #FFFFFF;
   color: #7A7A7A;
-  padding: 7px;
-  width: 130px;
-  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  border-radius: 7px;
   cursor: pointer;
-  margin-left: 80px;
-  margin-top: 30px;
+  display: grid;
+  margin: 0 auto;
+  margin-top: 20px;
   text-decoration: none;
   transition: 300ms;
 }
@@ -68,14 +93,12 @@ background-color: white;
   border: 2px solid #FF9243;
   color: #7A7A7A;
   background-color: #FFFFFF;
-  padding: 7px;
-  width: 130px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  display: grid;
+  margin: 0 auto;
+  border-radius: 7px;
   cursor: pointer;
-  margin-left: 80px;
   margin-top: 30px;
   text-decoration: none;
   transition: 300ms;

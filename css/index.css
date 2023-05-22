@@ -278,6 +278,7 @@ h1{
   .carousel li:hover {
     background-color: #7A7A7A;
     transition: 300ms;
+    transform: translateY(-5px);
   }
   
   .carousel li img {
