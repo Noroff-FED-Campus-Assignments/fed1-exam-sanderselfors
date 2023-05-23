@@ -216,6 +216,31 @@ html, body{
       max-width: 1000px;
       margin-bottom: 110px;  
     }
+
+
+  .getintouch-btn{
+    background-color: none;
+    border-radius: 10px;
+    border: 2px solid #FF9243;
+    color: #7A7A7A;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    display: grid;
+    text-align: center;
+    margin: 0 auto;
+    width: 250px;
+    transition: 300ms;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .getintouch-btn:hover{
+    background-color: #7A7A7A;
+    color: #FF9243;
+    border: 2px solid #7A7A7A;
+    transition: 300ms;
+  }
     
     * {
       box-sizing: border-box;
