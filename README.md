@@ -65,9 +65,9 @@ All of these todo's must be done to pass the asssignment.
 
 - [ ] End-user can search for a specific item.
 - [ ] End-user can filter the list.
-- [ ] End-user can sort list by;
-  - [ ] Name ascending order
-  - [ ] Name descending order
+- [x] End-user can sort list by;
+  - [x] Name ascending order
+  - [x] Name descending order
 - [x] Confirmation modal after custumer submits a successful contact form.
 - [x] End-user can auto-fill the contact form using the browser auto-fill.
 - [ ] End-user can auto-fill the contact form using a password manager.
@@ -80,33 +80,33 @@ All of these todo's must be done to pass the asssignment.
 - [ ] End-user can view a custom favicon.
 - [ ] CSS uses variables
 - [ ] Code is dry - There are no repeating functions, variables.
-- [ ] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
+- [x] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 - [ ] As a stakeholder, I want to view the website analytics.
 - [ ] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
 - [ ] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
 - [ ] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
 - [ ] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
-- [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
+- [x] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
 
-  - [ ] Is user-friendly
-  - [ ] Effective use of the pillars of design
-    - [ ] Typography
-    - [ ] Colour
-    - [ ] Composition
-    - [ ] Art Direction
-    - [ ] Motion
-  - [ ] Adhered to principles of design
-    - [ ] Contrast
-    - [ ] Balance and alignment
-    - [ ] Emphasis
-    - [ ] Proportion
-    - [ ] Hiearchy
-    - [ ] Repetition
-    - [ ] Ryhthem
-    - [ ] Pattern
-    - [ ] Negative space
-    - [ ] Movement
+  - [x] Is user-friendly
+  - [x] Effective use of the pillars of design
+    - [x] Typography
+    - [x] Colour
+    - [x] Composition
+    - [x] Art Direction
+    - [x] Motion
+  - [x] Adhered to principles of design
+    - [x] Contrast
+    - [x] Balance and alignment
+    - [x] Emphasis
+    - [x] Proportion
+    - [x] Hiearchy
+    - [x] Repetition
+    - [x] Ryhthem
+    - [x] Pattern
+    - [x] Negative space
+    - [x] Movement
 
 ## Checklist
 
