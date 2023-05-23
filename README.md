@@ -79,12 +79,12 @@ All of these todo's must be done to pass the asssignment.
   - [x] Contact form success modal fades in.
 - [ ] End-user can view a custom favicon.
 - [ ] CSS uses variables
-- [ ] Code is dry - There are no repeating functions, variables.
+- [x] Code is dry - There are no repeating functions, variables.
 - [x] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 - [ ] As a stakeholder, I want to view the website analytics.
 - [ ] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
 - [ ] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
-- [ ] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
+- [x] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
 - [ ] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
 - [x] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
@@ -112,11 +112,11 @@ All of these todo's must be done to pass the asssignment.
 
 Make sure you go through this checklist before submitting your project to Moodle.
 
-- [ ] All pages have a meta description.
-- [ ] All pages have a valid title.
-- [ ] All pages import the correct css files.
-- [ ] All pages import the correct JS file.
-- [ ] Details page URL includes a query param.
+- [x] All pages have a meta description.
+- [x] All pages have a valid title.
+- [x] All pages import the correct css files.
+- [x] All pages import the correct JS file.
+- [x] Details page URL includes a query param.
 - [ ] My website makes a GET request to an API to get a list of results.
 - [ ] My website makes a GET request to an API to get details of one result.
 - [ ] Input fields have the following attributes;
