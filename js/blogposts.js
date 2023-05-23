@@ -1,6 +1,7 @@
 const endpoint = 'https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/?per_page=12';
 const postList = document.getElementById('post-list');
 const showMoreBtn = document.getElementById('show-more-btn');
+const sortingFilter = document.getElementById('sorting-filter');
 
 let startIndex = 0;
 let totalPosts = 0;
@@ -49,9 +50,16 @@ function renderPost(post) {
 
   postList.appendChild(li);
 }
+function fetchPosts(sortOrder) {
+  let fetchURL = endpoint;
 
-function fetchPosts() {
-  fetch(endpoint)
+  if (sortOrder === 'az') {
+    fetchURL += '&orderby=title&order=asc';
+  } else if (sortOrder === 'za') {
+    fetchURL += '&orderby=title&order=desc';
+  }
+
+  fetch(fetchURL)
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to fetch posts');
@@ -90,3 +98,11 @@ function fetchMorePosts() {
 
 fetchPosts();
 showMoreBtn.addEventListener('click', fetchMorePosts);
+
+
+sortingFilter.addEventListener('change', () => {
+  const sortOrder = sortingFilter.value;
+  postList.innerHTML = '';
+  startIndex = 0;
+  fetchPosts(sortOrder);
+});

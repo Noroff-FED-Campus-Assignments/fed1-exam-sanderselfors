@@ -67,6 +67,7 @@ function handleNext() {
   if (currentPage < Math.ceil(posts.length / itemsPerPage) - 1) {
     currentPage++;
     renderPosts(currentPage * itemsPerPage);
+
   }
 }
 
