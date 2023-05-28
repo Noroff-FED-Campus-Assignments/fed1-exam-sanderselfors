@@ -1,15 +1,122 @@
-/*!
- * Forms
- * form classes use the c- prefix to indicate they are components used in layout.
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-2/forms
- */
+.contact-section {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 600px;
+  min-width: 320px;
+  padding-bottom: 60px;
+  margin-bottom: 110px;
+}
+.contact-form {
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
-.c-form {
+.contact-text {
+  color: #e6d6b5;
+  font-size: 20px;
+}
+
+.contact-form input {
+  min-height: 34px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 300ms;
+  border: 1.5px solid #7a7a7a;
+}
+
+textarea#message {
+  min-height: 150px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1.5px solid #7a7a7a;
+  font-family: "SF Pro", sans-serif;
+  transition: 300ms;
+}
+textarea#message:hover {
+  border-color: #ff9243;
+  transition: 300ms;
+}
+.contact-form input:is(:hover, :active) {
+  border-color: #ff9243;
+  transition: 300ms;
+}
+
+input.error-occurred {
+  border-color: rgb(255, 0, 0);
+  background-color: white;
+}
+
+input.successfull {
+  border-color: #00ff04;
+  background-color: white;
+}
+
+textarea#message.error-occurred {
+  border-color: rgb(255, 0, 0);
+  background-color: white;
+}
+
+textarea#message.successfull {
+  border-color: #00ff04;
+  background-color: white;
+}
+
+.submit-btn {
+  font-size: medium;
+  border: 2px solid #ff9243;
+  background-color: #ffffff;
+  color: #7a7a7a;
+  padding: 10px;
+  width: 200px;
+  border-radius: 7px;
+  cursor: pointer;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: var(--spacing-1);
-  padding: var(--spacing-1);
-  background-color: var(--color-white);
-  border-radius: var(--radius-1);
-  box-shadow: var(--shadow-1);
+  margin: 0 auto;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.reset-btn {
+  font-size: medium;
+  border: 2px solid #ff9243;
+  color: #7a7a7a;
+  background-color: #ffffff;
+  padding: 10px;
+  width: 200px;
+  display: grid;
+  margin: 0 auto;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 30px;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.submit-btn:hover {
+  background-color: #7a7a7a;
+  color: #ff9243;
+  border: 2px solid #7a7a7a;
+  transition: 300ms;
+}
+
+.reset-btn:hover {
+  color: rgb(255, 0, 0);
+  background-color: #7a7a7a;
+  border: 2px solid #7a7a7a;
+  transition: 300ms;
+}
+
+.contact-form label {
+  display: none;
 }

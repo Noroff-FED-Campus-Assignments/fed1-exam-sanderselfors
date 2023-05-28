@@ -1,13 +1,21 @@
-/*!
- * Animation
- * @tutorial https://web.dev/learn/css/animations/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-4/animations-transitions
- */
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+}
 
-@keyframes loading-anime {
-  from {
-    transform: rotate(0deg);
-  }
+.loader {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 7px solid #ff9243;
+  border-top-color: transparent;
+  animation: loader-spin 1.2s linear infinite;
+}
+
+@keyframes loader-spin {
   to {
     transform: rotate(360deg);
   }
