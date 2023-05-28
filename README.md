@@ -14,7 +14,7 @@ This project was bootstrapped with Vite.
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
 - [Design](https://www.figma.com/file/mqqZDYm54FIwYehodSIjQ2/FED-1-Exam?type=design&node-id=0-1&t=PfHw7D51ZhONxMKP-0)
 - [Production deploy](https://exam1selfors.netlify.app/)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
+- [Deployment CI](https://app.netlify.com/sites/exam1selfors/overview)
 - [API Docs](https://remarkable-rainstorm.flywheelsites.com/)
 - [API Endpoint](https://remarkable-rainstorm.flywheelsites.com/)
 
