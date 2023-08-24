@@ -1,46 +1,52 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
+const params = new URLSearchParams(window.location.search);
+const postId = params.get("id");
+const postTitleEl = document.getElementById("post-title");
+const postContentEl = document.getElementById("post-content");
 
-// TODO: Get DOM elements from the DOM
+fetch(
+  `https://projectexamselfors.flywheelsites.com/wp-json/wp/v2/posts/${postId}`
+)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch post data");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    document.title = data.title.rendered;
 
-// TODO: Get the query parameter from the URL
+    postTitleEl.innerText = data.title.rendered;
+    postContentEl.innerHTML = data.content.rendered;
 
-// TODO: Get the id from the query parameter
+    const images = postContentEl.getElementsByTagName("img");
 
-// TODO: Create a new URL with the id @example: https://www.youtube.com/shorts/ps7EkRaRMzs
+    Array.from(images).forEach((image) => {
+      const enlargedImgDiv = document.createElement("div");
+      enlargedImgDiv.classList.add("enlarged-img");
+      enlargedImgDiv.style.display = "none";
 
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
+      const enlargedImg = new Image();
+      enlargedImg.src = image.src;
+      enlargedImg.classList.add("enlarged-img__image");
+      enlargedImgDiv.appendChild(enlargedImg);
 
-// TODO: Fetch and Render the list to the DOM
+      image.addEventListener("click", () => {
+        postContentEl.style.display = "none";
+        enlargedImgDiv.style.display = "flex";
+        document.body.appendChild(enlargedImgDiv);
+      });
 
-// TODO: Create event listeners for the filters and the search
-
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
-
-// TODO: Fetch an a single of objects from the API
-
-/*
-============================================
-Helper functions
-============================================
-*/
-
-/**
- * TODO: Create a function to create a DOM element.
- * @example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
+      enlargedImgDiv.addEventListener("click", () => {
+        enlargedImgDiv.style.display = "none";
+        postContentEl.style.display = "block";
+        document.body.removeChild(enlargedImgDiv);
+      });
+    });
+  })
+  .catch((error) => {
+    console.error(error);
+    const errorMessage = document.createElement("p");
+    errorMessage.innerText =
+      "Failed to fetch post data. Please try again later.";
+    postContentEl.appendChild(errorMessage);
+  });

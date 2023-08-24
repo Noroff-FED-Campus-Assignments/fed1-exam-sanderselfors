@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contactpage" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Headless CMS" />
+    <meta name="author" content="Sander Selfors" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <header>
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="index.html" class="nav-logo1"
+            >Expand<span style="color: #eaeaea">Media</span></a
+          >
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="homebutton">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="blogbutton">Blog Posts</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="aboutbutton">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="contactbutton">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <div class="contact-text">
+          <h1>
+            <span style="color: #ff9243">Contact </span>Us For More
+            <span style="color: #ff9243">Advice</span>
+          </h1>
+        </div>
+        <section role="form-section">
+          <p id="formmessage" class="errormessage"></p>
+
+          <form class="contact-form" id="form" autocomplete="on">
+            <div class="contact-form">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Name" required />
+              <p class="formvalidation" data-id="validationmessage"></p>
+            </div>
+
+            <div class="contact-form">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Email" required />
+              <p class="formvalidation" data-id="validationmessage"></p>
+            </div>
+
+            <div class="contact-form">
+              <label for="subject">Subject</label>
+              <input
+                type="subject"
+                id="subject"
+                placeholder="Subject"
+                required
+              />
+              <p class="formvalidation" data-id="validationmessage"></p>
+            </div>
+
+            <div class="contact-form">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Message" required></textarea>
+              <p class="formvalidation" data-id="validationmessage"></p>
+            </div>
+
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-logo">
+        <a href="index.html">Expand<span style="color: #eaeaea">Media</span></a>
+      </div>
+      <div class="copyright">
+        <h4>© 2023 Made by Sander Selfors</h4>
+      </div>
+    </footer>
+    <script type="module" src="/js/contact.js"></script>
+    <script type="module" src="/js/hamburger.js"></script>
+    <script type="module" src="/js/loader.js"></script>
+  </body>
+</html>
