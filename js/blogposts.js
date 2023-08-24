@@ -1,5 +1,5 @@
 const endpoint =
-  "https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/?per_page=12";
+  "https://projectexamselfors.flywheelsites.com/wp-json/wp/v2/posts/?nocache&per_page=12";
 const postList = document.getElementById("post-list");
 const showMoreBtn = document.getElementById("show-more-btn");
 const sortingFilter = document.getElementById("sorting-filter");
@@ -13,7 +13,7 @@ function renderPost(post) {
   li.classList.add("post-card");
 
   fetch(
-    `https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/media/${post.featured_media}`
+    `https://projectexamselfors.flywheelsites.com/wp-json/wp/v2/media/${post.featured_media}`
   )
     .then((response) => {
       if (!response.ok) {

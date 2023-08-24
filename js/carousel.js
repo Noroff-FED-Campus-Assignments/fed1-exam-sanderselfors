@@ -1,5 +1,5 @@
 const endpoint =
-  "https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/?per_page=12";
+  "https://projectexamselfors.flywheelsites.com/wp-json/wp/v2/posts/?nocache&per_page=12";
 const postList = document.getElementById("post-list");
 const carouselContainer = document.getElementById("carousel-container");
 const prevBtn = document.getElementById("prev-btn");

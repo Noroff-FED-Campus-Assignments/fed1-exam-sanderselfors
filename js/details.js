@@ -4,7 +4,7 @@ const postTitleEl = document.getElementById("post-title");
 const postContentEl = document.getElementById("post-content");
 
 fetch(
-  `https://remarkable-rainstorm.flywheelsites.com/wp-json/wp/v2/posts/${postId}`
+  `https://projectexamselfors.flywheelsites.com/wp-json/wp/v2/posts/${postId}`
 )
   .then((response) => {
     if (!response.ok) {
